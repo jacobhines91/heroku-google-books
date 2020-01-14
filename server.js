@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // MONGO CONN
-mongoose.connect(process.env.MONGO_URI || "mongodb://<user>:<MMS71255>@ds263448.mlab.com:63448/heroku_5609nxvsmongodb://jacobhines91:MMS71255_@ds139425.mlab.com:39425/heroku_gbz1q68s");
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/google-books');
 
 app.use(routes);
 
@@ -23,4 +23,4 @@ app.get("*", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
-});n
+});
